@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  padding: 7%;
+}
+
+.container {
+  border: 1px solid orange;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* background-color: rgba(244, 197, 15, 0.13); */
+  background-color: rgb(247, 194, 21);
+  gap: 33px;
+  position: relative;
+}
+
+/* Style for each box */
+.box {
+  overflow: hidden;
+  flex: 1;
+  background-color: white;
+  padding: 20px 25px;
+  text-align: center;
+  position: relative;
+}
+
+.box a {
+  position: absolute;
+  bottom: 3%;
+  left: 33%;
+  color: rgb(5, 184, 255);
+  text-decoration: none;
+}
+
+.box h3 {
+  margin-bottom: 1.4rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.088);
+  padding-bottom: 1.5rem;
+}
+
+/* Style for the price box */
+.price-box {
+  background-color: #add8e62e;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 10px;
+  width: 15vw;
+  max-width: 100vw;
+  text-align: center;
+  display: inline-block;
+}
+
+.price-box .price-heading {
+  font-size: 19px;
+}
+
+.price-box .price {
+  font-size: 3.4rem;
+  position: relative;
+}
+.price-box .price .currency {
+  font-size: 2rem;
+  position: absolute;
+  top: 6px;
+  left: -19px;
+}
+.price-box .price-link {
+  font-size: 15px;
+  color: blue;
+}
+
+.price-box .inclusive {
+  color: #333;
+}
+
+/* Style for the paragraphs */
+.paragraphs {
+  margin: 0.7rem 0 3rem 0;
+  font-size: 13px;
+  color: #333;
+  font-weight: 550;
+  text-align: start;
+  width: 15vw;
+  line-height: 1.2rem;
+}
+
+.slider-dots {
+  display: none;
+}
+
+/* Style for the slider dots */
+.slider-dots span {
+  width: 18px;
+  height: 19px;
+  background-color: #3333338d;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Style for the active dot */
+.slider-dots span.active {
+  background-color: #333;
+}
+.detail-box {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  body {
+    padding: 0;
+  }
+}
+/* Positioning for mobile and tablet */
+@media screen and (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .box:first-child {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .box {
+    display: none;
+  }
+  .box h3 {
+    font-size: 25px;
+  }
+  .box a {
+    position: absolute;
+    left: 44%;
+  }
+  .price-box {
+    width: 70vw;
+    padding: 10px;
+  }
+  .paragraphs {
+    width: 70vw;
+    margin: 2rem 0;
+    display: inline-block;
+    font-size: 15px;
+  }
+
+  .slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
